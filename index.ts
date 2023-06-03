@@ -152,7 +152,7 @@ export function makeFile({
   )
 }
 
-export default async function makeText(text: string, hold = './tmp/hold') {
+export default async function loveCode(text: string, hold = './tmp/hold') {
   const link = path.join(process.cwd(), hold)
   const tmp = makeFile({
     suffix: '.ts',
