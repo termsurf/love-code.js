@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["es2020"],
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "noUncheckedIndexedAccess": true,
+    "noErrorTruncation": true,
+    "noImplicitAny": true,
+    "declaration": true
+  },
+  "include": ["hold/*.ts"]
+}
