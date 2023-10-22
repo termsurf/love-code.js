@@ -53,8 +53,6 @@ const ESLINT: Linter.Config = {
     '@typescript-eslint',
     'import',
     'simple-import-sort',
-    'typescript-sort-keys',
-    'sort-keys',
     'prettier',
   ],
   rules: {
@@ -126,11 +124,7 @@ const ESLINT: Linter.Config = {
       { blankLine: 'always', next: '*', prev: 'block-like' },
     ],
     'prettier/prettier': 2,
-    'sort-keys': 0,
-    'sort-keys/sort-keys-fix': 2,
     'space-before-blocks': 'off',
-    'typescript-sort-keys/interface': 'error',
-    'typescript-sort-keys/string-enum': 'error',
   },
 }
 
@@ -152,7 +146,10 @@ export function makeFile({
   )
 }
 
-export default async function loveCode(text: string, hold = './tmp/hold') {
+export default async function loveCode(
+  text: string,
+  hold = './tmp/hold',
+) {
   const link = path.join(process.cwd(), hold)
   const tmp = makeFile({
     suffix: '.ts',
