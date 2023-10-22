@@ -48,6 +48,6 @@ bootstrapped by working full time and running
 [Etsy](https://etsy.com/shop/wavebond) and
 [Amazon](https://www.amazon.com/s?rh=p_27%3AMount+Build) shops. Also
 find us on [Facebook](https://www.facebook.com/wavebond),
-[Twitter](https://twitter.com/wavebond), and
+[Twitter](https://twitter.com/_wavebond), and
 [LinkedIn](https://www.linkedin.com/company/wavebond). Check out our
 other GitHub projects as well!
