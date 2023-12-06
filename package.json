@@ -1,13 +1,9 @@
 {
-  "name": "@wavebond/love-code",
+  "name": "@textsurf/love-code",
   "type": "module",
   "version": "0.1.0",
   "license": "MIT",
   "main": "./host/index.js",
-  "files": [
-    "./host/index.js",
-    "./host/index.d.ts"
-  ],
   "scripts": {
     "make": "tsc && tsc-alias",
     "scan": "concurrently --kill-others \"tsc -w\" \"tsc-alias -w\"",
