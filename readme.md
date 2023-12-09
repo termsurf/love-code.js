@@ -47,7 +47,7 @@ seed of a project just beginning its development phases. It is entirely
 bootstrapped by working full time and running
 [Etsy](https://etsy.com/shop/textsurf) and
 [Amazon](https://www.amazon.com/s?rh=p_27%3AMount+Build) shops. Also
-find us on [Facebook](https://www.facebook.com/textsurf),
-[Twitter](https://twitter.com/_textsurf), and
+find us on [Facebook](https://www.facebook.com/textsurfcodecode),
+[Twitter](https://twitter.com/textsurfcode), and
 [LinkedIn](https://www.linkedin.com/company/textsurf). Check out our
 other GitHub projects as well!
