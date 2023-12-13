@@ -48,6 +48,6 @@ bootstrapped by working full time and running
 [Etsy](https://etsy.com/shop/termsurf) and
 [Amazon](https://www.amazon.com/s?rh=p_27%3AMount+Build) shops. Also
 find us on [Facebook](https://www.facebook.com/termsurf),
-[Twitter](https://twitter.com/termsurfcode), and
+[Twitter](https://twitter.com/termsurf), and
 [LinkedIn](https://www.linkedin.com/company/termsurf). Check out our
 other GitHub projects as well!
