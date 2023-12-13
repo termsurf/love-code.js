@@ -47,7 +47,7 @@ seed of a project just beginning its development phases. It is entirely
 bootstrapped by working full time and running
 [Etsy](https://etsy.com/shop/termsurf) and
 [Amazon](https://www.amazon.com/s?rh=p_27%3AMount+Build) shops. Also
-find us on [Facebook](https://www.facebook.com/termsurfcodecode),
+find us on [Facebook](https://www.facebook.com/termsurf),
 [Twitter](https://twitter.com/termsurfcode), and
 [LinkedIn](https://www.linkedin.com/company/termsurf). Check out our
 other GitHub projects as well!
