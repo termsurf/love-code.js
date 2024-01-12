@@ -4,11 +4,6 @@ import fs from 'fs'
 import os from 'os'
 import path from 'path'
 import prettier from 'prettier'
-import { fileURLToPath } from 'url'
-
-const __filename = fileURLToPath(import.meta.url)
-
-const __dirname = path.dirname(__filename)
 
 const PRETTIER = {
   arrowParens: 'avoid' as const,
@@ -40,22 +35,39 @@ const ESLINT: Linter.Config = {
     browser: true,
     es2021: true,
   },
-  extends: ['prettier'],
-  // },
-  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 'latest' as const,
-    // extraFileExtensions: ['.'],
-    project: [`${__dirname}/tsconfig.lib.json`],
-    sourceType: 'module' as const,
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json'],
   },
+  overrides: [
+    {
+      files: ['*.yaml', '*.yml'],
+      parser: 'yaml-eslint-parser',
+    },
+  ],
+  parser: '@typescript-eslint/parser',
   plugins: [
     '@typescript-eslint',
     'import',
     'simple-import-sort',
+    'sort-exports',
+    'typescript-sort-keys',
+    'sort-keys',
     'prettier',
   ],
+  extends: ['prettier'],
   rules: {
+    curly: 2,
+    '@typescript-eslint/quotes': [
+      'error',
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true,
+      },
+    ],
+    '@typescript-eslint/no-unnecessary-condition': 0,
     '@typescript-eslint/array-type': [
       2,
       {
@@ -63,68 +75,57 @@ const ESLINT: Linter.Config = {
       },
     ],
     '@typescript-eslint/await-thenable': 'error',
-    '@typescript-eslint/consistent-type-definitions': [2, 'type'],
+    '@typescript-eslint/consistent-type-definitions': 0,
     '@typescript-eslint/consistent-type-exports': 'error',
-    '@typescript-eslint/lines-between-class-members': 'error',
     '@typescript-eslint/method-signature-style': 'error',
     '@typescript-eslint/naming-convention': 0,
-    '@typescript-eslint/no-array-constructor': 'error',
-    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-for-in-array': 'error',
-    '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/no-namespace': 0,
     '@typescript-eslint/no-non-null-assertion': 'error',
     '@typescript-eslint/no-require-imports': 'error',
     '@typescript-eslint/no-this-alias': 'error',
-    '@typescript-eslint/no-throw-literal': 'error',
-    '@typescript-eslint/no-unnecessary-condition': 0,
     '@typescript-eslint/no-unsafe-argument': 'error',
-    '@typescript-eslint/no-unsafe-assignment': 'error',
-    '@typescript-eslint/no-unsafe-member-access': 'error',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'error',
-    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-useless-empty-export': 'error',
+    '@typescript-eslint/prefer-function-type': 'error',
+    'no-array-constructor': 'off',
+    '@typescript-eslint/no-array-constructor': 'error',
+    'no-throw-literal': 'off',
+    '@typescript-eslint/no-throw-literal': 'error',
+    'lines-between-class-members': 'off',
+    '@typescript-eslint/lines-between-class-members': 'error',
+    'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': [2, 'always'],
+    'padding-line-between-statements': 'off',
     '@typescript-eslint/padding-line-between-statements': [
       'error',
       {
         blankLine: 'always',
-        next: ['type'],
         prev: '*',
+        next: ['type'],
       },
     ],
-    '@typescript-eslint/prefer-function-type': 'error',
-    '@typescript-eslint/quotes': [
-      'error',
-      'single',
-      {
-        allowTemplateLiterals: true,
-        avoidEscape: true,
-      },
-    ],
+    'space-before-blocks': 'off',
     '@typescript-eslint/space-before-blocks': ['error', 'always'],
     '@typescript-eslint/type-annotation-spacing': [
       'error',
       { after: true },
     ],
-    curly: 2,
-    'default-case': 'error',
-    'default-case-last': 'error',
     'import/first': 'error',
     'import/newline-after-import': 'error',
     'import/no-duplicates': 'error',
-    'lines-between-class-members': 'off',
-    'no-array-constructor': 'off',
-    'no-throw-literal': 'off',
-    'object-curly-spacing': 'off',
-    'padding-line-between-statements': [
-      'warn',
-      { blankLine: 'always', next: 'block', prev: '*' },
-      { blankLine: 'always', next: '*', prev: 'block' },
-      { blankLine: 'always', next: 'block-like', prev: '*' },
-      { blankLine: 'always', next: '*', prev: 'block-like' },
-    ],
+    'sort-exports/sort-exports': 'off',
+    'typescript-sort-keys/interface': 'off',
+    'typescript-sort-keys/string-enum': 'off',
+    'sort-keys': 'off',
+    'sort-keys/sort-keys-fix': 'off',
     'prettier/prettier': 2,
-    'space-before-blocks': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    'default-case': 'off',
+    'default-case-last': 'off',
   },
 }
 

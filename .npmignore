@@ -1,0 +1,7 @@
+.vscode
+.prettierignore
+.prettierrc.json
+.eslintrc.json
+tsconfig.json
+tsconfig.lib.json
+tmp

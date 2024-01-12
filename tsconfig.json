@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "ESNext",
+    "module": "CommonJS",
+    "target": "ES5",
     "lib": ["es2020"],
     "outDir": "host",
     "rootDir": ".",
     "sourceMap": true,
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
     "strict": true,
     "esModuleInterop": true,
